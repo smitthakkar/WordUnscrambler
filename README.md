@@ -1,4 +1,4 @@
 # WordUnscrambler
 Given a word find all possible valid english words that can be made.
 
-Implementation using hashMap
+Simple Implementation using hashMap
