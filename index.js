@@ -10,13 +10,11 @@ function setWordList(value){
 
 function clearContent(domElement){
     while(domElement.firstChild!=null || domElement.firstChild!=undefined){
-
         domElement.removeChild(domElement.firstChild);
     }
 }
 
 function updateValueFromMap(list,value){
-    
     var mapValues=getWordsFromMap(value);
     for(var val of mapValues){
         list.appendChild(createNodeWithValue(val));
@@ -32,17 +30,11 @@ function getWordsFromMap(word){
             resultSet.push(fileMap.get(fileValue));
         }
     }
-    console.log(resultSet);
   return resultSet;
 }
 
 function isProperSubset(source,target){
    var result = false;
-
-   if(source == 'a1e1g1l1n1'){
-       console.log('Entered');
-   }
-
    if(source.length>target.length)
     {
        result=false;
@@ -50,10 +42,6 @@ function isProperSubset(source,target){
     else{
          len1=source.length;len2=target.length;s1=0;t1=0;temp=0;
          while(s1<len1 && t1<len2 && source[s1]>=target[t1]){
-
-
-
-
             if(source[s1]==target[t1] && source[s1+1]<=target[t1+1] ){
                     s1+=2; temp++;                 
             }
@@ -84,13 +72,10 @@ function populateWordsInMap(){
       }
       fileMap.get(token).push(value);
    } 
-   console.log(fileMap.keys());
+  
 }
 
 function getStringDesc(value){
-if(value=='triangle'){
-    console.log('Reached')
-}
     var tempMap=new Map();
     var tempSet = new Set();
     var tempArray = new Array();
