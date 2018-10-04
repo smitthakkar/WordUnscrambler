@@ -27,10 +27,9 @@ function getWordsFromMap(word){
     var resultSet = new Array();
     for(var fileValue of allFileKeys ){
         if(isProperSubset(fileValue,token)){
-            resultSet.push(fileMap.get(fileValue).split(","));
+            resultSet.push(fileMap.get(fileValue));
         }
     }
-    console.log(resultSet);
   return resultSet;
 }
 
